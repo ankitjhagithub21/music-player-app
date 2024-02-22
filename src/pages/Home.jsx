@@ -7,7 +7,8 @@ const Home = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
   const handleClick  = (index) =>{
-    navigate(`/song/${index+1}`)
+
+    navigate(`/song/${songs[index].name.replace(/\s+/g, '-')}`);
     dispatch(setCurrSongIndex(index))
   }
   return (

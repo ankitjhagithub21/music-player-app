@@ -14,3 +14,28 @@ body {
 * {
     outline: none;
 }
+.album {
+   
+   
+   background: #B5AAC3;
+    border-radius: 50%;
+    animation: pulse 2s ease-out infinite;
+  }
+ 
+  
+  .album::after {
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    border-radius: 50%;
+    position: absolute;
+  }
+  
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0px rgb(224, 82, 213),0 0 0 0px rgba(25, 190, 228, 0.85);  }
+    50% { transform: scale(0.95); }
+    100% { box-shadow: 0 0 0 15px rgba(0,210,255,0),0 0 0 30px rgba(0,210,255,0); }
+  }
