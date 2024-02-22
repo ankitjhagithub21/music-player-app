@@ -3,15 +3,15 @@ import { createSlice } from '@reduxjs/toolkit';
 export const songSlice = createSlice({
   name: 'song',
   initialState:{
-    value:null
+    value:0
   },
   reducers: {
-     setCurrSong:(state,action)=>{
+     setCurrSongIndex:(state,action)=>{
         state.value = action.payload
      }
   },
 });
 
-export const { setCurrSong } = songSlice.actions;
+export const { setCurrSongIndex } = songSlice.actions;
 
 export default songSlice.reducer;
